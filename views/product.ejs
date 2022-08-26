@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Aeroson Enterprises</title>
+
+    <script src="https://checkout.stripe.com/checkout.js" defer></script>
+
+
+
+
+    <script src="store.js" defer></script>
+
+
+</head>
+
+
+<body>
+    <form action="/product" method="post">
+    <header class="header" >
+        <nav class="navbar" style="position: fixed; width: 100%;">
+            <img class="nav-logo" src="css/images/aeroson-logo.jpg" alt="" width="200px">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/product" class="nav-link">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/service" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#cart" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                  </svg></a>
+              </li>
+              <li class="nav-item">
+                <a href="/" class="nav-link">Log out</a>
+            </li>
+
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container content-section">
+      <h2 class="section-header" style="text-align: center; margin-top: 100px;">CPVC Pipes</h2>
+      <div class="shop-items">
+        <% items.cpvc.forEach(function(item){ %>
+            <div class="shop-item" data-item-id="<%= item.id %>">
+                <span class="shop-item-title"><%= item.name %></span>
+                <img class="shop-item-image" src="Images/<%= item.imgName %>">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">₹ <%= item.price %></span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+        <% }) %>
+      </div>
+    </section>
+
+  <section class="container content-section">
+    <h2 class="section-header" style="text-align: center; margin-top: 40px;">UPVC Pipes</h2>
+    <div class="shop-items">
+        <% items.upvc.forEach(function(item){ %>
+            <div class="shop-item" data-item-id="<%= item.id %>">
+                <span class="shop-item-title"><%= item.name %></span>
+                <img class="shop-item-image" src="Images/<%= item.imgName %>">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">₹<%= item.price %></span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</section>
+
+<section class="container content-section" id="cart" style=" background:  #B5DEFF;">
+  <h2 class="section-header" style="text-align: center; margin-top: 40px; padding: 20px 0 10px; " >CART</h2>
+  <div class="cart-row">
+      <span class="cart-item cart-header cart-column">ITEM</span>
+      <span class="cart-price cart-header cart-column">PRICE</span>
+      <span class="cart-quantity cart-header cart-column">QNTY/LEN</span>
+  </div>
+  <div class="cart-items">
+  </div>
+  <div class="cart-total">
+      <strong class="cart-total-title">Total</strong>
+      <span class="cart-total-price">₹0</span>
+  </div>
+  <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+</section>
+
+</form>
+
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

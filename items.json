@@ -1,0 +1,114 @@
+{
+    "cpvc": [
+      {
+        "id": 1,
+        "name": "Coupler Plain",
+        "price": 49.90,
+        "imgName": "product1.png"
+      },
+      {
+        "id": 2,
+        "name": "Bend 45° Plain",
+        "price": 40,
+        "imgName": "product2.png"
+      },
+      {
+        "id": 3,
+        "name": "Tee 90° Plain",
+        "price": 49.90,
+        "imgName": "product3.png"
+      },
+      {
+        "id": 4,
+        "name": "Reducer Elbow 90°",
+        "price":40.90 ,
+        "imgName": "product4.png"
+      },
+      {
+        "id": 5,
+        "name": "Cross Tee 90",
+        "price":49.90 ,
+        "imgName": "product5.png"
+      },
+      {
+        "id": 6,
+        "name": "Union",
+        "price":25 ,
+        "imgName": "product12.png"
+      },
+      {
+        "id": 7,
+        "name": "SDR-11(3Mtr.Length)",
+        "price":149 ,
+        "imgName": "product13.jpg"
+      },
+      {
+        "id": 8,
+        "name": "SDR-13.5(5Mtr.Length)",
+        "price":199 ,
+        "imgName": "product14.png"
+      },
+      {
+        "id": 9,
+        "name": "Concealed Valves",
+        "price": 150 ,
+        "imgName": "product15.jpg"
+      }
+    ],
+    "upvc": [
+      {
+        "id": 10,
+        "name": "Elbow 90° (Brass)",
+        "price": 24.99,
+        "imgName": "product6.jpg"
+      },
+      {
+        "id": 11,
+        "name": "Tee (Brass)",
+        "price": 34.99,
+        "imgName": "product7.jpg"
+      },
+      {
+        "id": 12,
+        "name": "Reducing FTA (Brass)",
+        "price": 24.99,
+        "imgName": "product8.jpg"
+      },
+      {
+        "id": 13,
+        "name": "Male Thread Adaptor(Brass)",
+        "price": 49.99,
+        "imgName": "product9.jpg"
+      },
+      {
+        "id": 14,
+        "name": "Female Thread Adaptor(Brass)",
+        "price": 49.99,
+        "imgName": "product10.jpg"
+      },
+      {
+        "id": 15,
+        "name": "Reducing MTA (Brass)",
+        "price": 35,
+        "imgName": "product11.jpg"
+      },
+      {
+        "id": 16,
+        "name": "UPVC PIPES(SCH-40)",
+        "price": 199,
+        "imgName": "product16.jpg"
+      },
+      {
+        "id": 17,
+        "name": "UPVC PIPES(SCH-80)",
+        "price": 249,
+        "imgName": "product17.jpg"
+      },
+      {
+        "id": 18,
+        "name": "Ball Valve",
+        "price": 60,
+        "imgName": "product19.jpg"
+      }
+    ]
+  }
